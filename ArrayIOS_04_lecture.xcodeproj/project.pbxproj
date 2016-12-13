@@ -104,9 +104,9 @@
 		F99209C81E009F2000B578A6 /* ArrayIOS_04_lecture */ = {
 			isa = PBXGroup;
 			children = (
-				F99209CC1E009F2000B578A6 /* AppDelegate.h */,
 				F99209FC1E009F3800B578A6 /* Array.h */,
 				F99209FD1E009F3800B578A6 /* Array.m */,
+				F99209CC1E009F2000B578A6 /* AppDelegate.h */,
 				F99209CD1E009F2000B578A6 /* AppDelegate.m */,
 				F99209CF1E009F2000B578A6 /* ViewController.h */,
 				F99209D01E009F2000B578A6 /* ViewController.m */,
@@ -513,6 +513,7 @@
 				F99209F51E009F2000B578A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F99209F61E009F2000B578A6 /* Build configuration list for PBXNativeTarget "ArrayIOS_04_lectureTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +522,7 @@
 				F99209F81E009F2000B578A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F99209F91E009F2000B578A6 /* Build configuration list for PBXNativeTarget "ArrayIOS_04_lectureUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +531,7 @@
 				F99209FB1E009F2000B578A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

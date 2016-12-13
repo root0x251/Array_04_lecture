@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Array.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    //metod 01
+    NSArray *arrayOne=[[NSArray alloc]initWithObjects:@"array One One",@"array One Twoo", @"array One Three", nil];
+    for (int arrayOneIndex = 0; arrayOneIndex < [arrayOne count]; arrayOneIndex++) {
+        NSLog(@"array One = %@, index = %d",[arrayOne objectAtIndex:arrayOneIndex], arrayOneIndex);
+    }
+    
+    //metod 02 ввывод с конца
+    NSArray *arrayTwo=@[@"arrayTwoOne",@"arrayTwoTwo",@"arrayTwoThree"];
+    for (int arrayTwoIndex=[arrayTwo count]-1; arrayTwoIndex >= 0; arrayTwoIndex--) {
+        NSLog(@"array Two = %@, index = %d", [arrayTwo objectAtIndex:arrayTwoIndex], arrayTwoIndex);
+    }
+    
+    //metod 02 ввывод с конца
+    NSArray *arrayThree=[[NSArray alloc]initWithObjects:@"arrayTreeOne",@"arrayThreeTwo",@"arrayTreeTree", nil];
+    for (NSString *arrayThreeString in arrayThree) { //для каждого объекта arrayTreeString в массиве
+        NSLog(@"array Three = %@, index = %d", arrayThreeString, [arrayThree indexOfObject:arrayThreeString]);
+    }
+    
     return YES;
 }
 
