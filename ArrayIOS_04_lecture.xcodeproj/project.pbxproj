@@ -15,7 +15,8 @@
 		F99209D91E009F2000B578A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99209D71E009F2000B578A6 /* LaunchScreen.storyboard */; };
 		F99209E41E009F2000B578A6 /* ArrayIOS_04_lectureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F99209E31E009F2000B578A6 /* ArrayIOS_04_lectureTests.m */; };
 		F99209EF1E009F2000B578A6 /* ArrayIOS_04_lectureUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F99209EE1E009F2000B578A6 /* ArrayIOS_04_lectureUITests.m */; };
-		F99209FE1E009F3800B578A6 /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = F99209FD1E009F3800B578A6 /* Array.m */; };
+		F9F8378B1E014ECA0055D589 /* ArrayObj.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F8378A1E014ECA0055D589 /* ArrayObj.m */; };
+		F9F8378E1E0152700055D589 /* ArrayObjChild.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F8378D1E0152700055D589 /* ArrayObjChild.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,10 @@
 		F99209EA1E009F2000B578A6 /* ArrayIOS_04_lectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArrayIOS_04_lectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99209EE1E009F2000B578A6 /* ArrayIOS_04_lectureUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayIOS_04_lectureUITests.m; sourceTree = "<group>"; };
 		F99209F01E009F2000B578A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F99209FC1E009F3800B578A6 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
-		F99209FD1E009F3800B578A6 /* Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Array.m; sourceTree = "<group>"; };
+		F9F837891E014ECA0055D589 /* ArrayObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayObj.h; sourceTree = "<group>"; };
+		F9F8378A1E014ECA0055D589 /* ArrayObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayObj.m; sourceTree = "<group>"; };
+		F9F8378C1E0152700055D589 /* ArrayObjChild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayObjChild.h; sourceTree = "<group>"; };
+		F9F8378D1E0152700055D589 /* ArrayObjChild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayObjChild.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +107,10 @@
 		F99209C81E009F2000B578A6 /* ArrayIOS_04_lecture */ = {
 			isa = PBXGroup;
 			children = (
-				F99209FC1E009F3800B578A6 /* Array.h */,
-				F99209FD1E009F3800B578A6 /* Array.m */,
+				F9F837891E014ECA0055D589 /* ArrayObj.h */,
+				F9F8378A1E014ECA0055D589 /* ArrayObj.m */,
+				F9F8378C1E0152700055D589 /* ArrayObjChild.h */,
+				F9F8378D1E0152700055D589 /* ArrayObjChild.m */,
 				F99209CC1E009F2000B578A6 /* AppDelegate.h */,
 				F99209CD1E009F2000B578A6 /* AppDelegate.m */,
 				F99209CF1E009F2000B578A6 /* ViewController.h */,
@@ -207,7 +212,7 @@
 		F99209BE1E009F2000B578A6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Slava;
 				TargetAttributes = {
 					F99209C51E009F2000B578A6 = {
@@ -279,9 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F99209D11E009F2000B578A6 /* ViewController.m in Sources */,
-				F99209FE1E009F3800B578A6 /* Array.m in Sources */,
 				F99209CE1E009F2000B578A6 /* AppDelegate.m in Sources */,
 				F99209CB1E009F2000B578A6 /* main.m in Sources */,
+				F9F8378B1E014ECA0055D589 /* ArrayObj.m in Sources */,
+				F9F8378E1E0152700055D589 /* ArrayObjChild.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +360,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -402,6 +409,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

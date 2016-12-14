@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "Array.h"
+#import "ArrayObj.h"
+#import "ArrayObjChild.h"
 
 @interface AppDelegate ()
 
@@ -28,14 +29,36 @@
     
     //metod 02 ввывод с конца
     NSArray *arrayTwo=@[@"arrayTwoOne",@"arrayTwoTwo",@"arrayTwoThree"];
-    for (int arrayTwoIndex=[arrayTwo count]-1; arrayTwoIndex >= 0; arrayTwoIndex--) {
-        NSLog(@"array Two = %@, index = %d", [arrayTwo objectAtIndex:arrayTwoIndex], arrayTwoIndex);
+    for (int i=[arrayTwo count] - 1; i >= 0; i--) {
+        NSLog(@"array Two = %@, index = %d", [arrayTwo objectAtIndex:i], i);
     }
     
-    //metod 02 ввывод с конца
+    //metod 03
     NSArray *arrayThree=[[NSArray alloc]initWithObjects:@"arrayTreeOne",@"arrayThreeTwo",@"arrayTreeTree", nil];
     for (NSString *arrayThreeString in arrayThree) { //для каждого объекта arrayTreeString в массиве
         NSLog(@"array Three = %@, index = %d", arrayThreeString, [arrayThree indexOfObject:arrayThreeString]);
+    }
+    
+    
+    ArrayObj *objOne=[[ArrayObj alloc]init];
+    ArrayObj *objTwo=[[ArrayObj alloc]init];
+    ArrayObjChild *objThree=[[ArrayObjChild alloc]init];
+    ArrayObj *test=[[ArrayObj alloc]init];
+    
+    objOne.name=@"Ron";
+    objTwo.name=@"Allan";
+    objThree.name=@"Kate";
+    [test setName:@"TEST"];
+    objThree.age=22;
+    
+    NSArray *array=@[objOne,objTwo,objThree,test];
+    for (ArrayObj *obj in array) {
+        NSLog(@"name=%@",obj.name);
+        [obj attention];
+        if ([obj isKindOfClass:[ArrayObjChild class]]) {
+            ArrayObjChild *child=(ArrayObjChild *)obj;           //приведедение типов
+            NSLog(@"возраст=%d",child.age);
+        }
     }
     
     return YES;
