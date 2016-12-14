@@ -10,6 +10,6 @@
 
 @interface ArrayObjChild : ArrayObj
 
-@property(assign,nonatomic)int age;
+@property (assign,nonatomic) int age;
 
 @end

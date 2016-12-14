@@ -11,7 +11,7 @@
 @implementation ArrayObj
 
 - (void)attention{
-    NSLog(@"%@, Attention",self.name);
+    NSLog(@"%@, Attention", self.name);
 }
 
 @end

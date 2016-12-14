@@ -10,10 +10,8 @@
 
 @interface ArrayObj : NSObject
 
-
-@property(strong,nonatomic)NSString *name;
+@property (strong, nonatomic) NSString *name;
 
 - (void)attention;
-
 
 @end

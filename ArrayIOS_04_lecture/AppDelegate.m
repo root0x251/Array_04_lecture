@@ -20,50 +20,47 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
-    //metod 01
-    NSArray *arrayOne=[[NSArray alloc]initWithObjects:@"array One One",@"array One Twoo", @"array One Three", nil];
+    // metod 01
+    NSArray *arrayOne = @[@"array One One", @"array One Twoo", @"array One Three"];
     for (int arrayOneIndex = 0; arrayOneIndex < [arrayOne count]; arrayOneIndex++) {
         NSLog(@"array One = %@, index = %d",[arrayOne objectAtIndex:arrayOneIndex], arrayOneIndex);
     }
     
-    //metod 02 ввывод с конца
-    NSArray *arrayTwo=@[@"arrayTwoOne",@"arrayTwoTwo",@"arrayTwoThree"];
-    for (int i=[arrayTwo count] - 1; i >= 0; i--) {
+    // metod 02 ввывод с конца
+    NSArray *arrayTwo = @[@"arrayTwoOne", @"arrayTwoTwo", @"arrayTwoThree"];
+    for (int i = [arrayTwo count] - 1; i >= 0; i--) {
         NSLog(@"array Two = %@, index = %d", [arrayTwo objectAtIndex:i], i);
     }
     
-    //metod 03
-    NSArray *arrayThree=[[NSArray alloc]initWithObjects:@"arrayTreeOne",@"arrayThreeTwo",@"arrayTreeTree", nil];
-    for (NSString *arrayThreeString in arrayThree) { //для каждого объекта arrayTreeString в массиве
+    // metod 03
+    NSArray *arrayThree = [[NSArray alloc] initWithObjects:@"arrayTreeOne", @"arrayThreeTwo", @"arrayTreeTree", nil];
+    for (NSString *arrayThreeString in arrayThree) { // для каждого объекта arrayTreeString в массиве
         NSLog(@"array Three = %@, index = %d", arrayThreeString, [arrayThree indexOfObject:arrayThreeString]);
     }
     
+    ArrayObj *objOne = [[ArrayObj alloc] init];
+    ArrayObj *objTwo = [[ArrayObj alloc] init];
+    ArrayObjChild *objThree = [[ArrayObjChild alloc] init];
+    ArrayObj *test = [[ArrayObj alloc] init];
     
-    ArrayObj *objOne=[[ArrayObj alloc]init];
-    ArrayObj *objTwo=[[ArrayObj alloc]init];
-    ArrayObjChild *objThree=[[ArrayObjChild alloc]init];
-    ArrayObj *test=[[ArrayObj alloc]init];
-    
-    objOne.name=@"Ron";
-    objTwo.name=@"Allan";
-    objThree.name=@"Kate";
+    objOne.name = @"Ron";
+    objTwo.name = @"Allan";
+    objThree.name = @"Kate";
     [test setName:@"TEST"];
-    objThree.age=22;
+    objThree.age = 22;
     
-    NSArray *array=@[objOne,objTwo,objThree,test];
+    NSArray *array = @[objOne, objTwo, objThree, test];
     for (ArrayObj *obj in array) {
-        NSLog(@"name=%@",obj.name);
+        NSLog(@"name=%@", obj.name);
         [obj attention];
         if ([obj isKindOfClass:[ArrayObjChild class]]) {
-            ArrayObjChild *child=(ArrayObjChild *)obj;           //приведедение типов
+            ArrayObjChild *child=(ArrayObjChild *)obj;           // приведедение типов
             NSLog(@"возраст=%d",child.age);
         }
     }
     
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

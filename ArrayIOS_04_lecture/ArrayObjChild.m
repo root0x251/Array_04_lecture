@@ -10,8 +10,8 @@
 
 @implementation ArrayObjChild
 
-- (void) attention{
-    NSLog(@"%@, на тебя особые планы",self.name);
+- (void)attention {
+    NSLog(@"%@, на тебя особые планы", self.name);
 }
 
 @end
